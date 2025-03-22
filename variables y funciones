@@ -1,0 +1,16 @@
+Para controlar la cantidad de kilómetros recorridos por los vehículos del parque automotor y optimizar los recursos, se necesita un sistema que registre y analice esta información. A continuación, se proponen variables y funciones para lograr este objetivo:
+Definición de Variables
+id_vehiculo: Un entero único que identifica cada vehículo (ej. 1, 2, 3...)
+kilometraje_inicial: Un número decimal que representa el kilometraje del vehículo al inicio del periodo de control.
+kilometraje_final: Un número decimal que representa el kilometraje del vehículo al final del periodo de control.
+kilometros_recorridos: Un número decimal calculado como la diferencia entre kilometraje_final y kilometraje_inicial.
+fecha_inicio: Una fecha que indica el comienzo del periodo de control.
+fecha_fin: Una fecha que indica el fin del periodo de control.
+tipo_vehiculo: Una cadena de texto que clasifica el tipo de vehículo (ej. "camión", "autobús", "coche")
+consumo_combustible: Un número decimal que representa el consumo de combustible durante el periodo (ej. en litros)
+costo_mantenimiento: Un número decimal que representa los costos de mantenimiento durante el periodo.
+Definición de Funciones
+registrar_kilometraje(id_vehiculo, kilometraje_final, fecha_fin): Esta función actualiza el kilometraje final de un vehículo, la fecha de la última lectura y calcula los kilómetros recorridos. Debe validar que el kilometraje_final sea mayor o igual al kilometraje_inicial registrado previamente para el vehículo. Si no lo es, debe generar un error.
+calcular_eficiencia(id_vehiculo, kilometros_recorridos, consumo_combustible): Esta función calcula la eficiencia del vehículo en términos de kilómetros por litro de combustible. Debe manejar la posibilidad de división por cero si el consumo de combustible es cero.
+generar_reporte(fecha_inicio, fecha_fin): Esta función genera un reporte que resume el kilometraje recorrido por cada vehículo dentro de un rango de fechas especificado. El reporte podría incluir el kilometraje total, el consumo de combustible, los costos de mantenimiento y la eficiencia de cada vehículo.
+optimizar_rutas(tipo_vehiculo, kilometros_recorridos): Esta función analiza los datos de kilometraje para identificar rutas ineficientes o áreas de mejora en la planificación logística, considerando el tipo de vehículo.
